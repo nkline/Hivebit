@@ -1,7 +1,7 @@
 $('.positions ul').cycle({
 	fx: 'scrollDown',
 	timeout: 1600,
-	speed: 400,
+	speed: 650,
 	easing: 'easeInOutBack',
 	random: true
 });
