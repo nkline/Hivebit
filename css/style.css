@@ -104,10 +104,6 @@ h2 {
 	text-transform: uppercase;
 	}
 
-h2 span {
-	font-size: 0.5em;
-	}
-	
 h3 {
 	font-size: 1.2em;
 	line-height: 1.2em;
@@ -118,9 +114,13 @@ h3 {
 	
 p {
 	font-size: 1.4em;
-	line-height: 1.35em;
+	line-height: 1.5em;
 	color: #696a6b;
 	margin: 0 0 1em 0;
+	}
+	
+p strong {
+	color: #494a4b;	
 	}
 
 /* Header Styles */
@@ -276,10 +276,11 @@ a.click:hover {
 	}
 	
 p.more {
-	margin: 30px 0;
+	margin: 30px 0 15px 0;
 	color: #589a00;
 	font-family: "LatoBold" Arial, Helvetica, sans-serif;
 	font-size: 1.4em;
+	text-align: center;
 	}	
 
 #more {
@@ -289,8 +290,12 @@ p.more {
 
 #more h2 {
 	font-family: "BebasNeue", Arial, Helvetica, sans-serif;
-	color: #333435;
+	color: #535455;
 	margin-top: 0;
+	}
+	
+#more h2 span {
+	color: #387a00;
 	}
 
 #more li {
