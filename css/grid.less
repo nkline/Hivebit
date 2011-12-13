@@ -1,0 +1,329 @@
+/* CSS RESET 
+===============================================================================*/
+
+html, body { margin: 0 !important; padding: 0 !important; } p, div, span, pre, code, blockquote, th, td, form, fieldset, legend, input, button, textarea, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; } dl, dt, dd, ol, ul, li { margin: 0; padding: 0; list-style: none; } table { border-collapse:collapse; border-spacing:0; } a { outline: none; text-decoration: none; } img, a img, :link img, :visited img { border: 0; }  strong, b { font-weight: bold; } em, i { font-style: italic; } font { font: 14px/21px Arial, Helvetica, sans-serif; }
+
+header, nav, aside, footer, article, section { display: block; }
+
+
+/* BASICS 
+===============================================================================*/
+
+body { 
+	text-align: center;
+	font-size: 62.5%;
+	line-height: 62.5%;
+	}
+	
+.container {
+	margin: 0 auto;
+	text-align: left;
+	}
+		
+.float.right { float: right; }
+.float.left { float: left; }
+
+.textalign.right { text-align: right; }
+.textalign.left { text-align: left; }
+.textalign.center { text-align: center; }
+
+
+
+/* 12-COLUMN GRID SYSTEM 
+===============================================================================*/
+	
+	// Desktop Variables //
+
+	@container:		960px;
+	@margin: 		12px;
+	@columns:		12;
+	@column:		(@container - (@margin*(@columns*2))) / @columns;
+
+	@radius:		0;
+	@padding:		12px;
+	@border:		1px;
+	@bordercolor:	#dedede;
+
+	@one: 			@column;
+	@two: 			(@column*2)+(@margin*2);
+	@three: 		(@column*3)+(@margin*4);
+	@four:			(@column*4)+(@margin*6);
+	@five:			(@column*5)+(@margin*8);
+	@six:			(@column*6)+(@margin*10);
+	@seven:			(@column*7)+(@margin*12);
+	@eight:			(@column*8)+(@margin*14);
+	@nine:			(@column*9)+(@margin*16);
+	@ten:			(@column*10)+(@margin*18);
+	@eleven:		(@column*11)+(@margin*20);
+	@twelve:		(@column*12)+(@margin*22);
+
+	.column, .columns { float: left; display: inline; margin-left: @margin; margin-right: @margin; }
+	.padded { padding: @padding; }
+	.rounded { -moz-border-radius: @radius; -webkit-border-radius: @radius; border-radius: @radius;}
+	.outlined { border: @border solid @bordercolor; border-top-color: #fff; border-left-color: #fff; background: #fff; }
+	.row { margin-bottom: @margin; }
+	.first { margin-left: 0; }
+	.last { margin-right: 0; }
+	.container { width: @container; }
+	
+	.container .one.column 			{ width: @one; &.padded { width: @one - (@padding*2); &.outlined { width: @one - (@padding*2) - (@border*2); }} &.outlined { width: @one - (@border*2) }}	
+	.container .two.columns 		{ width: @two; &.padded { width: @two - (@padding*2); &.outlined { width: @two - (@padding*2) - (@border*2); }} &.outlined { width: @two - (@border*2) }}	
+	.container .three.columns 		{ width: @three; &.padded { width: @three - (@padding*2); &.outlined { width: @three - (@padding*2) - (@border*2); }} &.outlined { width: @three - (@border*2) }}	
+	.container .four.columns 		{ width: @four; &.padded { width: @four - (@padding*2); &.outlined { width: @four - (@padding*2) - (@border*2); }} &.outlined { width: @four - (@border*2) }}	
+	.container .five.columns 		{ width: @five; &.padded { width: @five - (@padding*2); &.outlined { width: @five - (@padding*2) - (@border*2); }} &.outlined { width: @five - (@border*2) }}	
+	.container .six.columns			{ width: @six; &.padded { width: @six - (@padding*2); &.outlined { width: @six - (@padding*2) - (@border*2); }} &.outlined { width: @six - (@border*2) }}	
+	.container .seven.columns 		{ width: @seven; &.padded { width: @seven - (@padding*2); &.outlined { width: @seven - (@padding*2) - (@border*2); }} &.outlined { width: @seven - (@border*2) }}	
+	.container .eight.columns 		{ width: @eight; &.padded { width: @eight - (@padding*2); &.outlined { width: @eight - (@padding*2) - (@border*2); }} &.outlined { width: @eight - (@border*2) }}	
+	.container .nine.columns 		{ width: @nine; &.padded { width: @nine - (@padding*2); &.outlined { width: @nine - (@padding*2) - (@border*2); }} &.outlined { width: @nine - (@border*2) }}	
+	.container .ten.columns 		{ width: @ten; &.padded { width: @ten - (@padding*2); &.outlined { width: @ten - (@padding*2) - (@border*2); }} &.outlined { width: @ten - (@border*2) }}	
+	.container .eleven.columns 		{ width: @eleven; &.padded { width: @eleven - (@padding*2); &.outlined { width: @eleven - (@padding*2) - (@border*2); }} &.outlined { width: @eleven - (@border*2) }}	
+	.container .twelve.columns 		{ width: @twelve; &.padded { width: @twelve - (@padding*2); &.outlined { width: @twelve - (@padding*2) - (@border*2); }} &.outlined { width: @twelve - (@border*2) }}		
+
+	.container .offset-by-one 		{ margin-left: @one + (@margin * 2);  }
+	.container .offset-by-two 		{ margin-left: @two + (@margin * 2); }
+	.container .offset-by-three 	{ margin-left: @three + (@margin * 2); }
+	.container .offset-by-four 		{ margin-left: @four + (@margin * 2); }
+	.container .offset-by-five 		{ margin-left: @five + (@margin * 2); }
+	.container .offset-by-six 		{ margin-left: @six + (@margin * 2); }
+	.container .offset-by-seven 	{ margin-left: @seven + (@margin * 2); }
+	.container .offset-by-eight 	{ margin-left: @eight + (@margin * 2); }
+	.container .offset-by-nine 		{ margin-left: @nine + (@margin * 2); }
+	.container .offset-by-ten 		{ margin-left: @ten + (@margin * 2); }
+	.container .offset-by-eleven 	{ margin-left: @eleven + (@margin * 2); }	
+
+	
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+	// Tablet Variables //
+
+	@container:		760px;
+	@margin: 		12px;
+	@columns:		12;
+	@column:		(@container - (@margin*(@columns*2))) / @columns;
+
+	@radius:		0;
+	@padding:		12px;
+	@border:		1px;
+	@bordercolor:	#dedede;
+
+	@one: 			@column;
+	@two: 			(@column*2)+(@margin*2);
+	@three: 		(@column*3)+(@margin*4);
+	@four:			(@column*4)+(@margin*6);
+	@five:			(@column*5)+(@margin*8);
+	@six:			(@column*6)+(@margin*10);
+	@seven:			(@column*7)+(@margin*12);
+	@eight:			(@column*8)+(@margin*14);
+	@nine:			(@column*9)+(@margin*16);
+	@ten:			(@column*10)+(@margin*18);
+	@eleven:		(@column*11)+(@margin*20);
+	@twelve:		(@column*12)+(@margin*22);
+
+	.column, .columns { float: left; display: inline; margin-left: @margin; margin-right: @margin; }
+	.padded { padding: @padding; }
+	.rounded { -moz-border-radius: @radius; -webkit-border-radius: @radius; border-radius: @radius;}
+	.outlined { border: @border solid @bordercolor; border-top-color: #fff; border-left-color: #fff; background: #fff; }
+	.row { margin-bottom: @margin; }
+	.first { margin-left: 0; }
+	.last { margin-right: 0; }
+	.container { width: @container; }
+	
+	.container .one.column 			{ width: @one; &.padded { width: @one - (@padding*2); &.outlined { width: @one - (@padding*2) - (@border*2); }} &.outlined { width: @one - (@border*2) }}	
+	.container .two.columns 		{ width: @two; &.padded { width: @two - (@padding*2); &.outlined { width: @two - (@padding*2) - (@border*2); }} &.outlined { width: @two - (@border*2) }}	
+	.container .three.columns 		{ width: @three; &.padded { width: @three - (@padding*2); &.outlined { width: @three - (@padding*2) - (@border*2); }} &.outlined { width: @three - (@border*2) }}	
+	.container .four.columns 		{ width: @four; &.padded { width: @four - (@padding*2); &.outlined { width: @four - (@padding*2) - (@border*2); }} &.outlined { width: @four - (@border*2) }}	
+	.container .five.columns 		{ width: @five; &.padded { width: @five - (@padding*2); &.outlined { width: @five - (@padding*2) - (@border*2); }} &.outlined { width: @five - (@border*2) }}	
+	.container .six.columns			{ width: @six; &.padded { width: @six - (@padding*2); &.outlined { width: @six - (@padding*2) - (@border*2); }} &.outlined { width: @six - (@border*2) }}	
+	.container .seven.columns 		{ width: @seven; &.padded { width: @seven - (@padding*2); &.outlined { width: @seven - (@padding*2) - (@border*2); }} &.outlined { width: @seven - (@border*2) }}	
+	.container .eight.columns 		{ width: @eight; &.padded { width: @eight - (@padding*2); &.outlined { width: @eight - (@padding*2) - (@border*2); }} &.outlined { width: @eight - (@border*2) }}	
+	.container .nine.columns 		{ width: @nine; &.padded { width: @nine - (@padding*2); &.outlined { width: @nine - (@padding*2) - (@border*2); }} &.outlined { width: @nine - (@border*2) }}	
+	.container .ten.columns 		{ width: @ten; &.padded { width: @ten - (@padding*2); &.outlined { width: @ten - (@padding*2) - (@border*2); }} &.outlined { width: @ten - (@border*2) }}	
+	.container .eleven.columns 		{ width: @eleven; &.padded { width: @eleven - (@padding*2); &.outlined { width: @eleven - (@padding*2) - (@border*2); }} &.outlined { width: @eleven - (@border*2) }}	
+	.container .twelve.columns 		{ width: @twelve; &.padded { width: @twelve - (@padding*2); &.outlined { width: @twelve - (@padding*2) - (@border*2); }} &.outlined { width: @twelve - (@border*2) }}		
+
+	.container .offset-by-one 		{ margin-left: @one + (@margin * 2);  }
+	.container .offset-by-two 		{ margin-left: @two + (@margin * 2); }
+	.container .offset-by-three 	{ margin-left: @three + (@margin * 2); }
+	.container .offset-by-four 		{ margin-left: @four + (@margin * 2); }
+	.container .offset-by-five 		{ margin-left: @five + (@margin * 2); }
+	.container .offset-by-six 		{ margin-left: @six + (@margin * 2); }
+	.container .offset-by-seven 	{ margin-left: @seven + (@margin * 2); }
+	.container .offset-by-eight 	{ margin-left: @eight + (@margin * 2); }
+	.container .offset-by-nine 		{ margin-left: @nine + (@margin * 2); }
+	.container .offset-by-ten 		{ margin-left: @ten + (@margin * 2); }
+	.container .offset-by-eleven 	{ margin-left: @eleven + (@margin * 2); }	
+
+}
+
+/* 1-COLUMN GRID SYSTEM 
+===============================================================================*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+	// Mobile Horizontal Variables //
+
+	@container:		420px;
+	@margin: 		0;
+	@columns:		1;
+	@column:		(@container - (@margin*(@columns*2))) / @columns;
+
+	@radius:		0;
+	@padding:		12px;
+	@border:		1px;
+	@bordercolor:	#dedede;
+
+	@one: 			@column;
+	@two: 			@column;
+	@three: 		@column;
+	@four: 			@column;
+	@five: 			@column;
+	@six: 			@column;
+	@seven: 		@column;
+	@eight: 		@column;
+	@nine: 			@column;
+	@ten: 			@column;
+	@eleven: 		@column;
+	@twelve: 		@column;
+	
+	@onethird:		@column;
+	@twothirds:		@column;
+
+
+	.column, .columns { float: left; display: inline; margin-left: @margin; margin-right: @margin; }
+	.padded { padding: @padding; }
+	.rounded { -moz-border-radius: @radius; -webkit-border-radius: @radius; border-radius: @radius;}
+	.outlined { border: @border solid @bordercolor; border-top-color: #fff; border-left-color: #fff; background: #fff; }
+	.row { margin-bottom: @margin; }
+	.first { margin-left: 0; }
+	.last { margin-right: 0; }
+	.container { width: @container; }
+	
+	.container .one.column 			{ width: @one; &.padded { width: @one - (@padding*2); &.outlined { width: @one - (@padding*2) - (@border*2); }} &.outlined { width: @one - (@border*2) }}	
+	.container .two.columns 		{ width: @two; &.padded { width: @two - (@padding*2); &.outlined { width: @two - (@padding*2) - (@border*2); }} &.outlined { width: @two - (@border*2) }}	
+	.container .three.columns 		{ width: @three; &.padded { width: @three - (@padding*2); &.outlined { width: @three - (@padding*2) - (@border*2); }} &.outlined { width: @three - (@border*2) }}	
+	.container .four.columns 		{ width: @four; &.padded { width: @four - (@padding*2); &.outlined { width: @four - (@padding*2) - (@border*2); }} &.outlined { width: @four - (@border*2) }}	
+	.container .five.columns 		{ width: @five; &.padded { width: @five - (@padding*2); &.outlined { width: @five - (@padding*2) - (@border*2); }} &.outlined { width: @five - (@border*2) }}	
+	.container .six.columns			{ width: @six; &.padded { width: @six - (@padding*2); &.outlined { width: @six - (@padding*2) - (@border*2); }} &.outlined { width: @six - (@border*2) }}	
+	.container .seven.columns 		{ width: @seven; &.padded { width: @seven - (@padding*2); &.outlined { width: @seven - (@padding*2) - (@border*2); }} &.outlined { width: @seven - (@border*2) }}	
+	.container .eight.columns 		{ width: @eight; &.padded { width: @eight - (@padding*2); &.outlined { width: @eight - (@padding*2) - (@border*2); }} &.outlined { width: @eight - (@border*2) }}	
+	.container .nine.columns 		{ width: @nine; &.padded { width: @nine - (@padding*2); &.outlined { width: @nine - (@padding*2) - (@border*2); }} &.outlined { width: @nine - (@border*2) }}	
+	.container .ten.columns 		{ width: @ten; &.padded { width: @ten - (@padding*2); &.outlined { width: @ten - (@padding*2) - (@border*2); }} &.outlined { width: @ten - (@border*2) }}	
+	.container .eleven.columns 		{ width: @eleven; &.padded { width: @eleven - (@padding*2); &.outlined { width: @eleven - (@padding*2) - (@border*2); }} &.outlined { width: @eleven - (@border*2) }}	
+	.container .twelve.columns 		{ width: @twelve; &.padded { width: @twelve - (@padding*2); &.outlined { width: @twelve - (@padding*2) - (@border*2); }} &.outlined { width: @twelve - (@border*2) }}		
+
+	.container .offset-by-one,
+	.container .offset-by-two,
+	.container .offset-by-three,
+	.container .offset-by-four,
+	.container .offset-by-five,
+	.container .offset-by-six,
+	.container .offset-by-seven,
+	.container .offset-by-eight,
+	.container .offset-by-nine,
+	.container .offset-by-ten,
+	.container .offset-by-eleven 	{ margin-left: 0; }	
+
+}
+
+@media only screen and (max-width: 479px) {
+
+	// Mobile Portrait Variables //
+
+	@container:		300px;
+	@margin: 		0;
+	@columns:		1;
+	@column:		(@container - (@margin*(@columns*2))) / @columns;
+
+	@radius:		0;
+	@padding:		12px;
+	@border:		1px;
+	@bordercolor:	#dedede;
+
+	@one: 			@column;
+	@two: 			@column;
+	@three: 		@column;
+	@four: 			@column;
+	@five: 			@column;
+	@six: 			@column;
+	@seven: 		@column;
+	@eight: 		@column;
+	@nine: 			@column;
+	@ten: 			@column;
+	@eleven: 		@column;
+	@twelve: 		@column;
+	@thirteen:		@column;
+	@fourteen:		@column;
+	@fifteen:		@column;
+	@sixteen:		@column;
+	
+	@onethird:		@column;
+	@twothirds:		@column;
+
+
+	.column, .columns { float: left; display: inline; margin-left: @margin; margin-right: @margin; }
+	.padded { padding: @padding; }
+	.rounded { -moz-border-radius: @radius; -webkit-border-radius: @radius; border-radius: @radius;}
+	.outlined { border: @border solid @bordercolor; border-top-color: #fff; border-left-color: #fff; background: #fff; }
+	.row { margin-bottom: @margin; }
+	.first { margin-left: 0; }
+	.last { margin-right: 0; }
+	.container { width: @container; }
+	
+	.container .one.column 			{ width: @one; &.padded { width: @one - (@padding*2); &.outlined { width: @one - (@padding*2) - (@border*2); }} &.outlined { width: @one - (@border*2) }}	
+	.container .two.columns 		{ width: @two; &.padded { width: @two - (@padding*2); &.outlined { width: @two - (@padding*2) - (@border*2); }} &.outlined { width: @two - (@border*2) }}	
+	.container .three.columns 		{ width: @three; &.padded { width: @three - (@padding*2); &.outlined { width: @three - (@padding*2) - (@border*2); }} &.outlined { width: @three - (@border*2) }}	
+	.container .four.columns 		{ width: @four; &.padded { width: @four - (@padding*2); &.outlined { width: @four - (@padding*2) - (@border*2); }} &.outlined { width: @four - (@border*2) }}	
+	.container .five.columns 		{ width: @five; &.padded { width: @five - (@padding*2); &.outlined { width: @five - (@padding*2) - (@border*2); }} &.outlined { width: @five - (@border*2) }}	
+	.container .six.columns			{ width: @six; &.padded { width: @six - (@padding*2); &.outlined { width: @six - (@padding*2) - (@border*2); }} &.outlined { width: @six - (@border*2) }}	
+	.container .seven.columns 		{ width: @seven; &.padded { width: @seven - (@padding*2); &.outlined { width: @seven - (@padding*2) - (@border*2); }} &.outlined { width: @seven - (@border*2) }}	
+	.container .eight.columns 		{ width: @eight; &.padded { width: @eight - (@padding*2); &.outlined { width: @eight - (@padding*2) - (@border*2); }} &.outlined { width: @eight - (@border*2) }}	
+	.container .nine.columns 		{ width: @nine; &.padded { width: @nine - (@padding*2); &.outlined { width: @nine - (@padding*2) - (@border*2); }} &.outlined { width: @nine - (@border*2) }}	
+	.container .ten.columns 		{ width: @ten; &.padded { width: @ten - (@padding*2); &.outlined { width: @ten - (@padding*2) - (@border*2); }} &.outlined { width: @ten - (@border*2) }}	
+	.container .eleven.columns 		{ width: @eleven; &.padded { width: @eleven - (@padding*2); &.outlined { width: @eleven - (@padding*2) - (@border*2); }} &.outlined { width: @eleven - (@border*2) }}	
+	.container .twelve.columns 		{ width: @twelve; &.padded { width: @twelve - (@padding*2); &.outlined { width: @twelve - (@padding*2) - (@border*2); }} &.outlined { width: @twelve - (@border*2) }}		
+
+	.container .offset-by-one,
+	.container .offset-by-two,
+	.container .offset-by-three,
+	.container .offset-by-four,
+	.container .offset-by-five,
+	.container .offset-by-six,
+	.container .offset-by-seven,
+	.container .offset-by-eight,
+	.container .offset-by-nine,
+	.container .offset-by-ten,
+	.container .offset-by-eleven 	{ margin-left: 0; }	
+
+}
+	
+
+/* CLEARFIX 
+===============================================================================*/
+	
+.container:after,
+.row:after, 
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: "hello";
+	clear: both;
+	height: 0;
+	}
+	
+* html .container,
+* html .row,
+* html .clearfix { zoom: 1; } /* IE6 */
+
+*:first-child+html .container,
+*:first-child+html .row,
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	}	
