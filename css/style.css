@@ -223,6 +223,8 @@ header .intro h1 strong {
 	height: 30px;
 	line-height: 30px;
 	outline: none;
+	-webkit-box-shadow: inset 0 1px 4px #222;
+	-moz-box-shadow: inset 0 1px 4px #222;
 	box-shadow: inset 0 1px 4px #222;
 	background: #fff;
 	}
@@ -235,6 +237,8 @@ header .intro h1 strong {
 	line-height: 30px;
 	border: 0;
 	background: #8cc63f;
+	-webkit-box-shadow: inset 0 -20px 20px #6ca61f, inset 0 1px 5px #4c860f;
+	-moz-box-shadow: inset 0 -20px 20px #6ca61f, inset 0 1px 5px #4c860f;
 	box-shadow: inset 0 -20px 20px #6ca61f, inset 0 1px 5px #4c860f;
 	font-size: 1.5em;
 	color: #fff;
@@ -246,11 +250,21 @@ header .intro h1 strong {
 	position: absolute;
 	top: 0;
 	right: 0;
+	-webkit-transition: all .25s ease-in;  
+	-moz-transition: all .25s ease-in;  
+	-o-transition: all .25s ease-in;  
+	transition: all .25s ease-in;
 	}
 
 .form input[type='submit']:hover {
 	background: #6ca61f;
+	-webkit-box-shadow: inset 0 -20px 20px #4c860f, inset 0 1px 5px #2c660f;
+	-moz-box-shadow: inset 0 -20px 20px #4c860f, inset 0 1px 5px #2c660f;
 	box-shadow: inset 0 -20px 20px #4c860f, inset 0 1px 5px #2c660f;
+	-webkit-transition: all .25s ease-in;  
+	-moz-transition: all .25s ease-in;  
+	-o-transition: all .25s ease-in;  
+	transition: all .25s ease-in;
 	}
 	
 	
@@ -267,12 +281,22 @@ a.click {
 	display: inline-block;
 	margin: 10px auto 30px;
 	padding: 10px 20px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 	border-radius: 2px;
+	-webkit-transition: all .25s ease-in;  
+	-moz-transition: all .25s ease-in;  
+	-o-transition: all .25s ease-in;  
+	transition: all .25s ease-in;
 	}
 
 a.click:hover {
 	background: #68aa10;
 	color: #fff;
+	-webkit-transition: all .25s ease-in;  
+	-moz-transition: all .25s ease-in;  
+	-o-transition: all .25s ease-in;  
+	transition: all .25s ease-in;
 	}
 	
 p.more {
