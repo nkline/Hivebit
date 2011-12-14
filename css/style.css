@@ -468,7 +468,7 @@ p.more {
 		}
 		
 	.icons {
-		position: relative;
+		left: 0 !important;
 		top: -60px;
 		}
 	
@@ -516,7 +516,7 @@ p.more {
 		}
 		
 	.icons {
-		position: relative;
+		left: 0 !important;
 		top: -40px;
 		}
 		
