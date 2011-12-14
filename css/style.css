@@ -130,6 +130,11 @@ header {
 	padding: 0 0 30px 0;
 	}
 	
+header .backgrounds {
+	position: relative;
+	margin-left: 48px;
+	}
+	
 header .row1,
 header .row2,
 header .row3 {
@@ -139,7 +144,7 @@ header .row3 {
 	background: url(../img/bg-row1.png) no-repeat 28% top;
 	position: absolute;
 	top: 0;
-	left: 66px;
+	left: 0;
 	z-index: 1;
 	}
 
@@ -163,9 +168,6 @@ header strong {
 	}
 	
 header .logo {
-	float: left;
-	margin-left: -24px;
-	margin-right: 24px;
 	position: relative;
 	z-index: 10;
 	}
