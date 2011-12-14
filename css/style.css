@@ -130,20 +130,50 @@ header {
 	padding: 0 0 30px 0;
 	}
 	
+header .row1,
+header .row2,
+header .row3 {
+	display: block;
+	width: 100%;
+	height: 155px;
+	background: url(../img/bg-row1.png) no-repeat 28% top;
+	position: absolute;
+	top: 0;
+	left: 66px;
+	z-index: 1;
+	}
+
+header .row2 {
+	display: block;
+	width: 100%;
+	height: 155px;
+	background: url(../img/bg-row2.png) no-repeat 28% top;
+	}
+
+header .row3 {
+	display: block;
+	width: 100%;
+	height: 155px;
+	background: url(../img/bg-row3.png) no-repeat 28% top;
+	}
+	
 header strong {
 	font-weight: 600;
 	color: #333435;
 	}
 	
 header .logo {
+	float: left;
 	margin-left: -24px;
-	margin-right: 24px;	
+	margin-right: 24px;
+	position: relative;
+	z-index: 10;
 	}
 	
 header .logo a {
 	display: block;
 	width: 100%;
-	height: auto;
+	height: 155px;
 	}
 	
 header .icons {

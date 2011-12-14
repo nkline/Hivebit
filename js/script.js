@@ -35,3 +35,56 @@ $('a').click(function() {
 		}
 	}
 });
+
+$('body').parallax({
+  'elements': [
+    {
+      'selector': '.row1',
+      'properties': {
+        'x': {
+          'background-position-x': {
+            'initial': 28,
+            'multiplier': 0.01,
+            'unit': '%'
+          }
+        }
+      }
+    },
+    {
+      'selector': '.row2',
+      'properties': {
+        'x': {
+          'background-position-x': {
+            'initial': 28,
+            'multiplier': 0.005,
+            'unit': '%'
+          }
+        }
+      }
+    },
+    {
+      'selector': '.row3',
+      'properties': {
+        'x': {
+          'background-position-x': {
+            'initial': 28,
+            'multiplier': 0.015,
+            'unit': '%'
+          }
+        }
+      }
+    },
+    {
+      'selector': '.logo',
+      'properties': {
+        'x': {
+          'left': {
+            'initial': 0,
+            'multiplier': 0.005,
+            'unit': '%'
+          }
+        }
+      }
+    }
+  ]
+});
