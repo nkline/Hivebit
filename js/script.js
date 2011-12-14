@@ -44,7 +44,7 @@ $('body').parallax({
         'x': {
           'background-position-x': {
             'initial': 28,
-            'multiplier': 0.01,
+            'multiplier': 0.02,
             'unit': '%'
           }
         }
@@ -56,7 +56,7 @@ $('body').parallax({
         'x': {
           'background-position-x': {
             'initial': 28,
-            'multiplier': 0.005,
+            'multiplier': 0.01,
             'unit': '%'
           }
         }
@@ -68,7 +68,7 @@ $('body').parallax({
         'x': {
           'background-position-x': {
             'initial': 28,
-            'multiplier': 0.015,
+            'multiplier': 0.025,
             'unit': '%'
           }
         }
@@ -82,6 +82,19 @@ $('body').parallax({
             'initial': 0,
             'multiplier': 0.005,
             'unit': '%'
+          }
+        }
+      }
+    },
+    {
+      'selector': '.icons',
+      'properties': {
+        'x': {
+          'left': {
+            'initial': 0,
+            'multiplier': 0.005,
+            'unit': '%',
+            'invert': true
           }
         }
       }
